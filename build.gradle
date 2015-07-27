@@ -6,10 +6,20 @@ buildscript {
    classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE'
   }
 }
+
+apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'spring-boot'
+
 repositories { jcenter()
 }
+
 dependencies {
   compile "org.springframework.boot:spring-boot-starter-actuator"
   compile "org.springframework.boot:spring-boot-starter-web"
+  testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.5'
 }
