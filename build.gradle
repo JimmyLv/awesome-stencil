@@ -17,6 +17,8 @@ repositories { jcenter()
 dependencies {
   compile "org.springframework.boot:spring-boot-starter-actuator"
   compile "org.springframework.boot:spring-boot-starter-web"
+  compile "org.springframework.boot:spring-boot-starter-data-jpa"
+  compile 'com.h2database:h2:1.4.184'
   testCompile("junit:junit")
 }
 

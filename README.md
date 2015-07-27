@@ -3,6 +3,7 @@
 ## Gradle build script
   
 - jcenter()
+- plugin
 - compile/testCompile
 - `gradle wrapper` (version: 2.5)
 
