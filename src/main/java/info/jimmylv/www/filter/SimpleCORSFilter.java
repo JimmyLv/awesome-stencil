@@ -1,4 +1,4 @@
-package filter;
+package info.jimmylv.www.filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;

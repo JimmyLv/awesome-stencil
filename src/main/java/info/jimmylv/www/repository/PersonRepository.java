@@ -1,6 +1,6 @@
-package repository;
+package info.jimmylv.www.repository;
 
-import domain.Person;
+import info.jimmylv.www.domain.Person;
 
 import java.util.List;
 

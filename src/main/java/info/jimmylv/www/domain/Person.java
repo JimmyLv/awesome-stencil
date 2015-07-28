@@ -1,4 +1,4 @@
-package domain;
+package info.jimmylv.www.domain;
 
 import java.util.List;
 

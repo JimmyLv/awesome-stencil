@@ -1,4 +1,4 @@
-package config;
+package info.jimmylv.www;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
@@ -14,7 +14,7 @@ public class MongoConfiguration extends AbstractMongoConfiguration
     @Override
     protected String getDatabaseName()
     {
-        return "sprmongo";
+        return "microservices";
     }
 
     @Override
@@ -26,6 +26,6 @@ public class MongoConfiguration extends AbstractMongoConfiguration
     @Override
     protected String getMappingBasePackage()
     {
-        return "";
+        return "info.jimmylv.www";
     }
 }

@@ -1,7 +1,7 @@
-package service;
+package info.jimmylv.www.service;
 
-import domain.Person;
-import repository.PersonRepository;
+import info.jimmylv.www.domain.Person;
+import info.jimmylv.www.repository.PersonRepository;
 
 import java.util.List;
 

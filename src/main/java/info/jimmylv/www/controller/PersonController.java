@@ -1,9 +1,8 @@
-package controller;
+package info.jimmylv.www.controller;
 
-import domain.Person;
-import resources.PersonResource;
-import service.PersonService;
-import service.PersonServiceImpl;
+import info.jimmylv.www.domain.Person;
+import info.jimmylv.www.resources.PersonResource;
+import info.jimmylv.www.service.PersonService;
 
 import java.net.URI;
 import java.util.List;

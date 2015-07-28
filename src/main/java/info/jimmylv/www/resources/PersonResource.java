@@ -1,10 +1,10 @@
-package resources;
+package info.jimmylv.www.resources;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
-import controller.PersonController;
-import domain.Person;
+import info.jimmylv.www.controller.PersonController;
+import info.jimmylv.www.domain.Person;
 
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceSupport;
