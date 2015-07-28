@@ -2,7 +2,12 @@
 
 ## How to start:
 
-git clone 
+- `git clone git@github.com:JimmyLv/SpringBoot-RESTful-MicroServices.git`
+- `gradle clean build`
+- open DataBase: `mongod`
+- `gralde bootRun`
+
+demo on heroku: [http://sb-restful-microservices.herokuapp.com](http://sb-restful-microservices.herokuapp.com)
 
 ## Some Notes:
 
@@ -62,3 +67,27 @@ git clone
 
 - get person list: `http://localhost:8080/persons`
 - get person by id: `http://localhost:8080/person/?id=55b7191bd4c67ac8c00c89e9`
+
+### Deploy
+
+- `heroku login`
+- `heroku keys:add ~/.ssh/id_rsa.pub`
+- `heroku create`
+- `git push heroku master`
+- `heroku open`
+
+**another config:**
+
+- modify `buildscript`
+- `apply plugin: 'heroku'`
+- `heroku { someparameter}`
+- add `Procfile`
+- Default Tasks: `"clean", "build", "installApp"`
+- add `system.properties`: `java.runtime.version=1.8`
+- `./gradlew herokuCreateApp`
+- `./gradlew herokuDeployApp`
+
+**WTF! can not use mongose in heroku:**
+
+>  !    Please verify your account to install this add-on plan (please enter a credit card) For more information, see [https://devcenter.heroku.com/categories/billing](https://devcenter.heroku.com/categories/billing) Verify now at [https://heroku.com/verify](https://heroku.com/verify)
+
