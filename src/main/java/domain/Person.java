@@ -1,3 +1,5 @@
+package domain;
+
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -11,7 +13,7 @@ public class Person
     private String firstName;
     @Field(value = "last_name")
     private String lastName;
-    
+
     private String profession;
     private int location[];
     private List<Company> companies;

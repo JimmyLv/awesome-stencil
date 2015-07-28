@@ -1,7 +1,10 @@
+package resources;
+
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
-import gpotes.examples.mongospring.app.PersonController;
-import gpotes.examples.mongospring.domain.Person;
+
+import controller.PersonController;
+import domain.Person;
 
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceSupport;

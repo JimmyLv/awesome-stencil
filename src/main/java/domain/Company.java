@@ -1,3 +1,5 @@
+package domain;
+
 import org.springframework.data.mongodb.core.index.Indexed;
 
 public class Company

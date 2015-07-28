@@ -16,3 +16,4 @@
 
 - main application
 - domain、repository、service
+- note: package/import

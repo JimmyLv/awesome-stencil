@@ -1,3 +1,5 @@
+package config;
+
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 
@@ -24,6 +26,6 @@ public class MongoConfiguration extends AbstractMongoConfiguration
     @Override
     protected String getMappingBasePackage()
     {
-        return "gpotes.examples.mongospring";
+        return "";
     }
 }

@@ -1,3 +1,5 @@
+package service;
+
 import domain.Person;
 import repository.PersonRepository;
 
@@ -7,18 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * @author gpotes
- *
- */
 @Component
 @Transactional
-public class PersonServiceImpl implements IPersonService
+public class PersonServiceImpl implements PersonService
 {
     private PersonRepository personRepository;
     
     @Autowired
-    public PersonService(final PersonRepository personRepository)
+    public PersonServiceImpl(final PersonRepository personRepository)
     {
         this.personRepository = personRepository;
     }

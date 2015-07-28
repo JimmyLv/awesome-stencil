@@ -1,7 +1,9 @@
+package controller;
+
 import domain.Person;
 import resources.PersonResource;
-import service.IPersonService;
 import service.PersonService;
+import service.PersonServiceImpl;
 
 import java.net.URI;
 import java.util.List;
@@ -22,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Component
 public class PersonController
 {
-    private IPersonService personService;
+    private PersonService personService;
 
     /**
      * @param personService
