@@ -2,8 +2,8 @@
 
 ## Gradle build script
   
-- jcenter()
-- plugin
+- `jcenter()`: include mvn and other repo
+- plugin: java、spring-boot
 - compile/testCompile
 - `gradle wrapper` (version: 2.5)
 
@@ -34,7 +34,7 @@
 ## API Test
 
 - [postman](https://www.getpostman.com/)
-- post: http://localhost:8080/saveperson
+- post: `http://localhost:8080/saveperson`
 
 ```json
 {
@@ -54,4 +54,5 @@
 }
 ```
 
-- get: http://localhost:8080/persons
+- get person list: `http://localhost:8080/persons`
+- get person by id: `http://localhost:8080/person/?id=55b7191bd4c67ac8c00c89e9`
