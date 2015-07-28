@@ -23,13 +23,15 @@ heroku {
     apiKey = 'a8dba137-b957-4d78-8201-9f81ba851d8d'
 
     //set this on first run if you don't want a generated name
-    //appName = 'some-unique-app-name'
+    appName = 'sb-restful-microservices'
 
     //set this if you are not happy with the default gradlew buildpack
     //buildpack = 'http://somebuildpack
 }
 
-repositories { jcenter()
+repositories { 
+  jcenter()
+  mavenCentral()
 }
 
 dependencies {
