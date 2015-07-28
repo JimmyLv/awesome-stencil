@@ -11,3 +11,8 @@
 
 - write code in `src/main/java`
 - `gradle clean build` (then download dependencies)
+
+## wirte code
+
+- main application
+- domain、repository、service
