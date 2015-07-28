@@ -1,1 +1,3 @@
-web: java $JAVA_OPTS -jar build/*.jar  
+---
+default_process_types:
+  web: java -jar -Dport=$PORT build/libs/*.jar

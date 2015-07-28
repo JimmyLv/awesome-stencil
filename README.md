@@ -1,18 +1,24 @@
 # This is my first SpringBoot project.
 
-## Gradle build script
+## How to start:
+
+git clone 
+
+## Some Notes:
+
+### Gradle build script
   
 - `jcenter()`: include mvn and other repo
 - plugin: java、spring-boot
 - compile/testCompile
 - `gradle wrapper` (version: 2.5)
 
-## build Project
+### build Project
 
 - write code in `src/main/java`
 - `gradle clean build` (then download dependencies)
 
-## wirte code
+### wirte code
 
 - main application
 - domain
@@ -25,13 +31,13 @@
 - warning: info.jimmylv.info
 - error: create another mongoDB
 
-## `gradle bootRun`
+### `gradle bootRun`
 
 - open mongoDB: `mongod`
 - mongo shell: `mongo help`
 - bootRun/jettyRun
 
-## API Test
+### API Test
 
 - [postman](https://www.getpostman.com/)
 - post: `http://localhost:8080/saveperson`
