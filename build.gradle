@@ -15,6 +15,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
 apply plugin: 'heroku'
+//apply plugin: 'checkstyle'
 
 defaultTasks "clean", "build", "installApp"
 

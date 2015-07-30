@@ -42,6 +42,29 @@ demo on heroku: [http://sb-restful-microservices.herokuapp.com](http://sb-restfu
 - mongo shell: `mongo help`
 - bootRun/jettyRun
 
+### Unit Test
+
+- JUnit: `SetUp(), `assertThat(, is())`
+- Mockito: `@Mock`, `@InjectMocks`, `initMocks()`
+- JUnitParams: `@RunWith(JUnitParamsRunner.class)`
+
+```java
+@Test
+@Parameters
+public void personIsAdult(int age, boolean valid) throws Exception {
+    assertEquals(valid, new Person(age).isAdult());
+}
+
+private Object[] parametersForPersonIsAdult() {
+    return new Object[]{
+                 new Object[]{13, false},
+                 new Object[]{17, false},
+                 new Object[]{18, true},
+                 new Object[]{22, true}
+            };
+}
+```
+
 ### API Test
 
 - [postman](https://www.getpostman.com/)
@@ -91,3 +114,7 @@ demo on heroku: [http://sb-restful-microservices.herokuapp.com](http://sb-restfu
 
 >  !    Please verify your account to install this add-on plan (please enter a credit card) For more information, see [https://devcenter.heroku.com/categories/billing](https://devcenter.heroku.com/categories/billing) Verify now at [https://heroku.com/verify](https://heroku.com/verify)
 
+### add checkstyle
+
+- `apply plugin: 'checkstyle'`
+- ./config/checkstyle/checkstyle.xml 
