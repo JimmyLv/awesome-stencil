@@ -2,13 +2,13 @@ package info.jimmylv.www.domain;
 
 import org.springframework.data.mongodb.core.index.Indexed;
 
-public class Company
-{
-    @Indexed (unique = true)
+public class Company {
+    @Indexed(unique = true)
     private String orgName;
     private String headquarter;
 
-    public Company() {}
+    public Company() {
+    }
 
     public Company(String orgName, String headquarter) {
         this.orgName = orgName;

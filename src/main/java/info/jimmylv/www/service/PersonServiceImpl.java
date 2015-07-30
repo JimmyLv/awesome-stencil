@@ -10,26 +10,21 @@ import java.util.List;
 
 @Component
 @Transactional
-public class PersonServiceImpl implements PersonService
-{
+public class PersonServiceImpl implements PersonService {
     private PersonRepository personRepository;
-    
+
     @Autowired
-    public PersonServiceImpl(final PersonRepository personRepository)
-    {
+    public PersonServiceImpl(final PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
 
-
     @Override
-    public List<Person> findAll()
-    {
+    public List<Person> findAll() {
         return personRepository.findAll();
     }
 
     @Override
-    public Person save(final Person person)
-    {
+    public Person save(final Person person) {
         return personRepository.save(person);
     }
 
@@ -37,7 +32,6 @@ public class PersonServiceImpl implements PersonService
     public Person findByFirstName(String firstName) {
         return personRepository.findByFirstName(firstName);
     }
-
 
     @Override
     public Person findById(final String id) {

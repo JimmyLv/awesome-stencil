@@ -9,23 +9,19 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @Configuration
 @EnableMongoRepositories
-public class MongoConfiguration extends AbstractMongoConfiguration
-{
+public class MongoConfiguration extends AbstractMongoConfiguration {
     @Override
-    protected String getDatabaseName()
-    {
+    protected String getDatabaseName() {
         return "microservices";
     }
 
     @Override
-    public Mongo mongo() throws Exception
-    {
-         return new MongoClient();
+    public Mongo mongo() throws Exception {
+        return new MongoClient();
     }
 
     @Override
-    protected String getMappingBasePackage()
-    {
+    protected String getMappingBasePackage() {
         return "info.jimmylv.www";
     }
 }
