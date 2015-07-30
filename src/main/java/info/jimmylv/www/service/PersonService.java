@@ -11,4 +11,6 @@ public interface PersonService
     Person findById(String id);
     
     Person save(Person person);
+
+    Person findByFirstName(String firstName);
 }

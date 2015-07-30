@@ -34,6 +34,12 @@ public class PersonController {
         return personService.findById(id);
     }
 
+
+    @RequestMapping("/personss/")
+    public Person findByFirstName(@RequestParam(value = "firstName") final String firstName) {
+        return personService.findByFirstName(firstName);
+    }
+
     @RequestMapping(value = "/saveperson", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<?> save(@RequestBody final Person person) {
         Person savedPerson = personService.save(person);
@@ -47,4 +53,5 @@ public class PersonController {
 //            .path("person/{id}").buildAndExpand(savedPerson.getId()).toUri());
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
+
 }

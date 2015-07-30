@@ -30,7 +30,8 @@ public class PersonControllerTest {
 
     @InjectMocks
     PersonController personController;
-    private String jimmy;
+    private String jimmy_id;
+    private String jimmy_first_name;
 
     @Before
     public void setUp() throws Exception {
@@ -39,8 +40,10 @@ public class PersonControllerTest {
         List<Person> persons = new ArrayList<>();
         when(personService.findAll()).thenReturn(persons);
 
-        jimmy = "jimmy";
-        when(personService.findById(jimmy)).thenReturn(person);
+        jimmy_id = "1234567890";
+        jimmy_first_name = "jimmy";
+        when(personService.findById(jimmy_id)).thenReturn(person);
+        when(personService.findByFirstName(jimmy_first_name)).thenReturn(person);
     }
 
     @Test
@@ -52,9 +55,15 @@ public class PersonControllerTest {
 
     @Test
     public void should_get_person_when_give_id() throws Exception {
-        assertThat(personController.findById(jimmy), is(person));
-        verify(personService).findById(jimmy);
+        assertThat(personController.findById(jimmy_id), is(person));
+        verify(personService).findById(jimmy_id);
 
+    }
+
+    @Test
+    public void should_get_person_when_give_first_name() throws Exception {
+        assertThat(personController.findByFirstName(jimmy_first_name), is(person));
+        verify(personService).findByFirstName(jimmy_first_name);
     }
 
     @Test
