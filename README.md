@@ -117,4 +117,4 @@ private Object[] parametersForPersonIsAdult() {
 ### add checkstyle
 
 - `apply plugin: 'checkstyle'`
-- ./config/checkstyle/checkstyle.xml 
+- `./config/checkstyle/checkstyle.xml`
