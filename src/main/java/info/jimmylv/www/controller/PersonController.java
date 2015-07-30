@@ -25,18 +25,18 @@ public class PersonController {
     }
 
     @RequestMapping("/persons")
-    public List<Person> findAll() {
+    public List<Person> getPersonsList() {
         return personService.findAll();
     }
 
     @RequestMapping("/person/")
-    public Person findById(@RequestParam(value = "id") final String id) {
+    public Person getPersonById(@RequestParam(value = "id") final String id) {
         return personService.findById(id);
     }
 
 
     @RequestMapping("/personss/")
-    public Person findByFirstName(@RequestParam(value = "firstName") final String firstName) {
+    public Person getPersonByFirstName(@RequestParam(value = "firstName") final String firstName) {
         return personService.findByFirstName(firstName);
     }
 

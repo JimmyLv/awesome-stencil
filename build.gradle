@@ -39,7 +39,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.hateoas:spring-hateoas")
     testCompile("junit:junit")
-    testCompile "org.mockito:mockito-core:1.+"
+    testCompile("org.mockito:mockito-core:1.+")
+    testCompile("pl.pragmatists:JUnitParams:1.0.4")
 }
 
 task wrapper(type: Wrapper) {

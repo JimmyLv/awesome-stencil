@@ -17,7 +17,7 @@ public class PersonResource extends ResourceSupport {
         this.person = person;
         this.add(new Link("htgd", "person-link"));
         this.add(linkTo(PersonController.class).withRel("bookmarks"));
-        this.add(linkTo(methodOn(PersonController.class).findById(person.getId())).withSelfRel());
+        this.add(linkTo(methodOn(PersonController.class).getPersonById(person.getId())).withSelfRel());
     }
 
     public Person getPerson() {
