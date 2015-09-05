@@ -13,6 +13,7 @@ public class Person {
     @Field(value = "last_name")
     private String lastName;
 
+    private String country;
     private String profession;
     private int location[];
     private List<Company> companies;
@@ -21,9 +22,10 @@ public class Person {
     }
 
     public Person(
-            String firstName, String lastName, String profession, int[] location, List<Company> companies) {
+            String firstName, String lastName, String country, String profession, int[] location, List<Company> companies) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.country = country;
         this.profession = profession;
         this.location = location;
         this.companies = companies;
@@ -84,4 +86,11 @@ public class Person {
         this.companies = companies;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 }
