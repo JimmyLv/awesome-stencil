@@ -107,3 +107,8 @@ private Object[] parametersForPersonIsAdult() {
 
 - `apply plugin: 'checkstyle'`
 - `./config/checkstyle/checkstyle.xml`
+
+## TODO
+
+- add request parameters filter
+- deploy/ or just in my Raspberry Pi

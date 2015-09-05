@@ -34,6 +34,5 @@ Running `grunt test` will run the unit tests with karma.
 
 - use ng-Resource: finish another request method
 - use ng-form to create new person
-- add request parameters filter
 - split local-dev and product env
 - learn to use protractor
