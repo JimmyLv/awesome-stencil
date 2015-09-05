@@ -2,8 +2,7 @@
 *.ipr
 *.iws
 
-out/
-build/
-
-.gradle/
-.gradletasknamecache
+back-end/out/
+back-end/build/
+back-end/.gradle/
+back-end/.gradletasknamecache
