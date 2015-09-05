@@ -1,31 +1,14 @@
-'use strict';
+angular.module('App.controllers', []);
 
-/**
- * @ngdoc overview
- * @name frontEndApp
- * @description
- * # frontEndApp
- *
- * Main module of the application.
- */
-angular
-  .module('frontEndApp', [
-    'ngResource',
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+angular.module('App', [
+  'App.services',
+  'App.controllers',
+  'ngRoute'
+]).
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.
+  when("/about", {templateUrl: "views/about.html", controller: "aboutController"}).
+  when("/persons", {templateUrl: "views/persons.html", controller: "personsController"}).
+  when("/persons/:id", {templateUrl: "views/person.html", controller: "personController"}).
+  otherwise({redirectTo: '/persons'});
+}]);

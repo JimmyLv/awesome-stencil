@@ -1,0 +1,37 @@
+<a href="./#/persons">&lt- Back to persons list</a>
+<section id="main">
+  <nav id="secondary" class="main-nav col-md-5">
+    <div class="driver-picture">
+      <div class="avatar">
+        <img ng-show="person" src="images/persons/{{person.firstName}}.png" />
+        <img ng-show="person" src="images/flags/{{person.country}}.png" /><br/>
+        <h3>I am {{person.firstName}} {{person.lastName}}</h3>
+      </div>
+    </div>
+    <div class="person-status">
+      Country: {{person.country}}   <br/>
+      Location: {{person.location[0] + ', ' +person.location[1]}}<br/>
+      Company: <b>{{person.companies[0].orgName}}</b><br/>
+      Headquarter: {{person.companies[0].headquarter}}<br/>
+    </div>
+  </nav>
+
+  <div class="main-content col-md-7">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr><th colspan="5">{{person.firstName}} 's Company</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>order</td> <td>orgName</td> <td>headquarter</td> <td>joinTime</td>
+        </tr>
+        <tr ng-repeat="company in person.companies">
+          <td>{{$index + 1}}</td>
+          <td>{{company.orgName}}</td>
+          <td>{{company.headquarter}}</td>
+          <td>{{company.joinTime}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
