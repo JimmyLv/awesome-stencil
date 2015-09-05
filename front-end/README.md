@@ -4,15 +4,23 @@
 
 `npm install -g yo bower grunt-cli gulp`
 
-快速搭起
+`yo angular`
 
-写HTML
+### route
 
-写controller return DataBase
+`app.js`
 
-in view 
+### view
 
-then route to tempalate
+`*.html`
+
+### data
+
+`controllers/*.js` 
+
+### services
+
+fetch data from back-end
 
 ### Build & development
 
@@ -21,3 +29,9 @@ Run `grunt` for building and `grunt serve` for preview.
 ### Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+## TODO
+
+- use ng-Resource: finish another request method
+- use ng-form to create new person
+- add filter
