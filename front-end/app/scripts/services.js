@@ -1,31 +1,31 @@
 angular.module('App.services', [])
-  .factory('ergastAPIservice', function($http) {
+  .factory('personAPIservice', function($http) {
 
-    var ergastAPI = {};
+    var personAPI = {};
 
-    ergastAPI.getPersons = function() {
+    personAPI.getPersons = function() {
       return $http({
         method: 'GET',
         url: 'http://localhost:8080/persons'
       });
     }
 
-    ergastAPI.getPersonById = function(id) {
+    personAPI.getPersonById = function(id) {
       return $http({
         method: 'GET',
         url: 'http://localhost:8080/person/?id=' + id
       });
     }
 
-    ergastAPI.getPersonByFirstName = function(firstName) {
+    personAPI.getPersonByFirstName = function(firstName) {
       return $http({
         method: 'GET',
         url: 'http://localhost:8080/person/?firstName='+ firstName
       });
     }
 
-    ergastAPI.createNewPerson = function() {
-      return $http.post('http://localhost:8080/saveperson', {msg:'hello word!'}).
+    personAPI.createNewPerson = function() {
+      return $http.post('http://localhost:8080/saveperson', {msg: 'hello word!'}).
         then(function(response) {
           console.log(response);
           // this callback will be called asynchronously
@@ -37,5 +37,5 @@ angular.module('App.services', [])
         });
     }
 
-    return ergastAPI;
+    return personAPI;
   });

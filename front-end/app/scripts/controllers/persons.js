@@ -1,7 +1,7 @@
 angular.module('App.controllers').
 
   /* Persons controller */
-  controller('personsController', function($scope, ergastAPIservice) {
+  controller('personsController', function($scope, personAPIservice) {
     $scope.nameFilter = null;
     $scope.personsList = [];
     $scope.searchFilter = function (person) {
@@ -9,7 +9,7 @@ angular.module('App.controllers').
         return !$scope.nameFilter || re.test(person.firstName) || re.test(person.lastName);
     };
 
-    ergastAPIservice.getPersons().success(function (response) {
+    personAPIservice.getPersons().success(function (response) {
         //Digging into the response to get the relevant data
         $scope.personsList = response;
     });
