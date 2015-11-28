@@ -2,18 +2,18 @@
 
 ## How to start
 
-- `git clone git@github.com:JimmyLv/SpringBoot-RESTful-MicroServices.git`
+- `git clone git@github.com:JimmyLv/awesome-stencil.git`
 
 ### run back-end
 
-- `cd SpringBoot-RESTful-MicroServices/back-end`
+- `cd spa-restapi/back-end`
 - `gradle clean build`
 - open DataBase: `mongod`
 - `gralde bootRun`
 
 ### run front-end
 
-- `cd SpringBoot-RESTful-MicroServices/front-end`
+- `cd spa-restapi/front-end`
 - `grunt serve`
 
 
