@@ -34,7 +34,6 @@ public class PersonController {
         return personService.findById(id);
     }
 
-
     @RequestMapping("/personss/")
     public Person getPersonByFirstName(@RequestParam(value = "firstName") final String firstName) {
         return personService.findByFirstName(firstName);
